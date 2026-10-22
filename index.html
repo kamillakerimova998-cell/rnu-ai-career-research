@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student research project proposal: an AI-powered career recommendation system for university students.">
+  <title>AI Career Matching | RNU Science Week 2027</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Research project home">
+      <span class="brand-mark">R</span>
+      <span>Research<span class="brand-muted">Lab</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <nav id="siteNav" class="site-nav">
+      <a href="#overview">Overview</a>
+      <a href="#method">Methodology</a>
+      <a href="#prototype">Prototype</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">RNU SCIENCE WEEK 2027 · STUDENT RESEARCH CONCEPT</p>
+        <h1>Smarter career matching for <span>university students.</span></h1>
+        <p class="hero-lead">A proposed data-driven system that connects student skills with internships and entry-level jobs—and explains what to learn next.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#overview">Explore the research</a>
+          <a class="button button-secondary" href="research-proposal.md">Read proposal draft</a>
+        </div>
+        <div class="hero-note"><span class="status-dot"></span> Research proposal and demonstrator · Evaluation results not yet collected</div>
+      </div>
+      <div class="hero-visual" aria-label="Illustration of skills matching">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="core-card">
+          <div class="core-icon">✦</div>
+          <p class="mini-label">SKILLS MATCH</p>
+          <div class="match-number" id="matchNumber">82%</div>
+          <div class="progress"><span id="matchProgress"></span></div>
+          <p class="small-muted">Illustrative demo score</p>
+        </div>
+        <div class="floating-card card-top"><span class="float-icon">⌘</span><span><b>Python</b><small>Skill detected</small></span><span class="check">✓</span></div>
+        <div class="floating-card card-bottom"><span class="float-icon purple">↗</span><span><b>Junior Data Analyst</b><small>Example vacancy</small></span></div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Project summary">
+      <div><strong>4</strong><span>Research stages</span></div>
+      <div><strong>3</strong><span>Matching approaches to compare</span></div>
+      <div><strong>1</strong><span>Interactive web demonstrator</span></div>
+      <div><strong>0</strong><span>Invented experimental results</span></div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="section-heading">
+        <p class="eyebrow">01 / RESEARCH OVERVIEW</p>
+        <h2>From a CV to an actionable career path.</h2>
+        <p class="section-intro">Students may struggle to translate coursework and personal projects into job requirements. This project proposes a transparent recommendation workflow that can be tested against a simple baseline.</p>
+      </div>
+      <div class="three-cards">
+        <article class="info-card"><div class="card-symbol">◎</div><h3>The problem</h3><p>Job descriptions use varied language, while students may not know which of their skills are relevant or which gaps matter most.</p></article>
+        <article class="info-card"><div class="card-symbol">⌁</div><h3>The proposed solution</h3><p>Extract skills from a student profile, compare them with vacancy requirements, rank opportunities, and explain each match.</p></article>
+        <article class="info-card"><div class="card-symbol">↗</div><h3>Practical value</h3><p>Offer understandable recommendations and a shortlist of skills a student could develop before applying.</p></article>
+      </div>
+      <div class="question-panel">
+        <div><p class="eyebrow">CENTRAL RESEARCH QUESTION</p><h3>Can a transparent skills-matching approach produce more useful job recommendations than basic keyword matching?</h3></div>
+        <div class="question-mark">?</div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="method">
+      <div class="section-heading">
+        <p class="eyebrow">02 / METHODOLOGY</p>
+        <h2>Test the idea, not just the interface.</h2>
+        <p class="section-intro">The planned study compares recommendation methods on a small, documented dataset. The final paper should report the actual dataset, procedure, limitations, and observed results.</p>
+      </div>
+      <div class="method-grid">
+        <div class="method-step"><span>01</span><div><h3>Build a dataset</h3><p>Create or collect a permitted set of anonymised student skill profiles and entry-level vacancy descriptions. Record the source and consent/privacy basis.</p></div></div>
+        <div class="method-step"><span>02</span><div><h3>Normalize skills</h3><p>Standardize equivalent terms such as “JS” and “JavaScript”, while retaining the original text for traceability.</p></div></div>
+        <div class="method-step"><span>03</span><div><h3>Compare methods</h3><p>Use keyword overlap as a baseline, a weighted skills score, and—if feasible—a semantic similarity method.</p></div></div>
+        <div class="method-step"><span>04</span><div><h3>Evaluate and reflect</h3><p>Measure ranking quality with suitable metrics and conduct a small usability review. Do not report results until tests are complete.</p></div></div>
+      </div>
+      <div class="metric-row">
+        <div><b>Precision@K</b><span>How many top recommendations are relevant?</span></div>
+        <div><b>Recall@K</b><span>How many relevant options appear in the top K?</span></div>
+        <div><b>Usability feedback</b><span>Can users understand the match explanation?</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="prototype">
+      <div class="section-heading">
+        <p class="eyebrow">03 / INTERACTIVE PROTOTYPE</p>
+        <h2>Try a sample skills match.</h2>
+        <p class="section-intro">This browser-only demonstration uses fictional vacancy data and a transparent overlap score. It is not a trained AI model and does not use or upload your personal data.</p>
+      </div>
+      <div class="demo-layout">
+        <form class="demo-form" id="matchForm">
+          <label for="skillsInput">Your skills (comma-separated)</label>
+          <textarea id="skillsInput" rows="4">Python, Excel, SQL, communication</textarea>
+          <label for="careerSelect">Career direction</label>
+          <select id="careerSelect">
+            <option value="all">All example roles</option>
+            <option value="data">Data and analytics</option>
+            <option value="web">Web development</option>
+            <option value="business">Business and operations</option>
+          </select>
+          <button class="button button-primary" type="submit">Find example matches</button>
+          <p class="form-hint">Use fictional information only. Scores are illustrative, not validated.</p>
+        </form>
+        <div class="results-area" aria-live="polite">
+          <div class="results-top"><h3>Suggested opportunities</h3><span id="resultCount">3 examples</span></div>
+          <div id="resultsList" class="results-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="timeline">
+      <div class="section-heading">
+        <p class="eyebrow">04 / PROJECT PLAN</p>
+        <h2>A manageable path to a research submission.</h2>
+        <p class="section-intro">RNU lists a submission deadline of 12 February 2027, 23:59 Riga time. Confirm the current instructions and official template before submission.</p>
+      </div>
+      <div class="timeline">
+        <div><span>PHASE 1</span><h3>Literature review</h3><p>Define the research gap, research question, and ethical boundaries.</p></div>
+        <div><span>PHASE 2</span><h3>Prototype & dataset</h3><p>Document data sources, implement matching approaches, and create test cases.</p></div>
+        <div><span>PHASE 3</span><h3>Evaluation</h3><p>Run experiments, record metrics, and discuss errors and limitations.</p></div>
+        <div><span>PHASE 4</span><h3>Paper & review</h3><p>Write a 4–6 page DOCX using the official conference template.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="sources">
+      <div class="section-heading">
+        <p class="eyebrow">05 / SOURCES & TRANSPARENCY</p>
+        <h2>Research starts with traceable evidence.</h2>
+        <p class="section-intro">These are starting points for the literature review, not a substitute for reading and citing the full sources. Check relevance and publication details before including them in the paper.</p>
+      </div>
+      <div class="source-list">
+        <a href="https://rnu.lv/en/call-for-research-submissions-for-rnu-science-week-2027/" target="_blank" rel="noreferrer"><span>01</span><div><b>RNU Science Week 2027 call</b><small>Official conference themes, deadline, and submission format</small></div><span>↗</span></a>
+        <a href="https://doi.org/10.1145/3290605.3300233" target="_blank" rel="noreferrer"><span>02</span><div><b>Recommender systems and user-centered evaluation</b><small>CHI 2019 paper — review the source for applicable evaluation concepts</small></div><span>↗</span></a>
+        <a href="https://scikit-learn.org/stable/modules/metrics.html" target="_blank" rel="noreferrer"><span>03</span><div><b>Scikit-learn: model evaluation metrics</b><small>Technical documentation for evaluation methods</small></div><span>↗</span></a>
+        <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noreferrer"><span>04</span><div><b>NIST AI Risk Management Framework</b><small>Considerations for trustworthy and responsible AI</small></div><span>↗</span></a>
+      </div>
+      <div class="integrity-note"><b>Research integrity note</b><p>This site is a project concept and demo. Replace placeholders with verified sources, documented methods, and real results from your own study. Do not present the illustrative scores or sample vacancies as empirical findings.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#home"><span class="brand-mark">R</span><span>Research<span class="brand-muted">Lab</span></span></a>
+    <p>Student research concept · Prepared for RNU Science Week 2027</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+</body>
+</html>
